@@ -19,7 +19,7 @@ pip install requirements.txt
 ```
 
 ### Download model weights
-The weights can be downloaded from the following [link](https://www.kaggle.com/sannapersson/weights-particle-tracking-yolov3)
+The weights can be downloaded from the following [link](https://www.kaggle.com/sannapersson/weights-particle-tracking-yolov3.
 Place the weights in the model folder.
 
 ### Inference with the model
