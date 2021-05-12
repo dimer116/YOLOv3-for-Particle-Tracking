@@ -3,7 +3,7 @@
 This repository contains the code for the Bachelor's thesis: Karakterisering och spårning av nanopartiklar med djupinlärning
 by  Arash Darakhsh, Edvin Johansson, Simon Nilsson, Sanna Persson and Rickard Ström at Chalmers University of Technology
 
-The code may shortly be updated with further clarifications to improve ease of use.
+The code for simulation will shortly be updated with further clarifications to improve ease of use.
 
 ## How to use the code
 
