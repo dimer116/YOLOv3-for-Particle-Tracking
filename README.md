@@ -39,7 +39,7 @@ run
 ```python
 python train.py --help
 ```
-to read about the training parameters. 
+to read about the training parameters to input them in the terminal. 
 To train the model run 
 ```python
 python train.py 
