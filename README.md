@@ -31,7 +31,7 @@ python detect_on_patches.py --help
 There are a couple of example experimental images in the folder data which you can test the model on. 
 
 ### Train the model
-An example dataset can be found on Kaggle of 448x448 images. Change the configuration for training in the config.py file or
+An example dataset can be found on Kaggle of 448x448 images (link: coming soon). Change the configuration for training in the config.py file or
 run
 ```python
 python train.py --help
