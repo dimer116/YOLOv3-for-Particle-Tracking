@@ -1,6 +1,6 @@
 # YOLOv3-for-Particle-Tracking
 
-This repository contains the code for Bachelor's thesis: Karakterisering och spårning av nanopartiklar med djupinlärning
+This repository contains the code for the Bachelor's thesis: Karakterisering och spårning av nanopartiklar med djupinlärning
 by  Arash Darakhsh, Edvin Johansson, Simon Nilsson, Sanna Persson and Rickard Ström at Chalmers University of Technology
 
 
@@ -16,7 +16,8 @@ pip install requirements.txt
 ```
 
 ### Download model weights
-The weights can be downloaded from the following link [link](https://www.kaggle.com/sannapersson/weights-particle-tracking-yolov3)
+The weights can be downloaded from the following [link](https://www.kaggle.com/sannapersson/weights-particle-tracking-yolov3)
+Place the weights in the model folder.
 
 ### Inference with the model
 Place your image in npy-format in the data-folder. Run 
@@ -27,7 +28,20 @@ For information on flags and arguments run:
 ```python
 python detect_on_patches.py --help
 ```
+There are a couple of example experimental images in the folder data which you can test the model on. 
 
 ### Train the model
-An example dataset can be found on Kaggle of 448x488 images
+An example dataset can be found on Kaggle of 448x488 images. Change the configuration for training in the config.py file or
+run
+```python
+python train.py --help
+```
+to read about the training parameters. 
+To train the model run 
+```python
+python train.py 
+```
+
+## Simulate images
+The code for simulating the images is found in the simulation folder.
 
