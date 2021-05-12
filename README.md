@@ -42,6 +42,6 @@ To train the model run
 python train.py 
 ```
 
-## Simulate images
+### Simulate images
 The code for simulating the images is found in the simulation folder.
 
