@@ -41,6 +41,7 @@ To train the model run
 ```python
 python train.py 
 ```
+A few examples of how to structure the training data is also found in the training_data folder. 
 
 ### Simulate images
 The code for simulating the images is found in the simulation folder.
