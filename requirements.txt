@@ -1,0 +1,9 @@
+deeptrack==0.9.1
+tqdm==4.56.0
+numpy==1.19.2
+torchvision==0.8.2
+pandas==1.2.1
+albumentations==0.5.2
+scipy==1.6.0
+matplotlib==3.3.4
+torch==1.7.1
