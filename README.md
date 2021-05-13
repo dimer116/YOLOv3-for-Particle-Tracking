@@ -9,21 +9,21 @@ The code for simulation will shortly be updated with further clarifications to i
 
 ## How to use the code
 
-### Download the repository
+### Download the repository and weights
+To clone the repository run:
 ```bash
 git clone https://github.com/Deep-learning-for-particle-tracking/YOLOv3-for-Particle-Tracking.git
 ```
+The weights are available at this [link](https://www.kaggle.com/sannapersson/weights-particle-tracking-yolov3) at Kaggle. 
+The source code and mod can also be downloaded in the release. In the data-folder in the release there are two example experimental images. 
+
 ### Install requirements
 ```bash
 pip install requirements.txt
 ```
 
-### Download model weights
-The weights can be downloaded from the release. 
-Place the weights in the model folder.
-
 ### Inference with the model
-Place your image in npy-format in the data-folder. Run 
+Place the weights in the model folder and the image for inference in npy-format in the data-folder. Run 
 ```python
 python detect_on_patches.py
 ```
