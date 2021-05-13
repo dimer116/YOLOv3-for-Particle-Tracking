@@ -18,6 +18,7 @@ The weights are available at this [link](https://www.kaggle.com/sannapersson/wei
 The source code and mod can also be downloaded in the release. In the data-folder in the release there are two example experimental images. 
 
 ### Install requirements
+For the installation of PyTorch it is best to check out the [PyTorch website](https://pytorch.org/) especially if you want a specific CUDA version.
 ```bash
 pip install requirements.txt
 ```
