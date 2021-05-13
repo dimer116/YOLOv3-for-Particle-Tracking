@@ -15,7 +15,7 @@ To clone the repository run:
 git clone https://github.com/Deep-learning-for-particle-tracking/YOLOv3-for-Particle-Tracking.git
 ```
 The weights are available at this [link](https://www.kaggle.com/sannapersson/weights-particle-tracking-yolov3) at Kaggle. 
-The source code and mod can also be downloaded in the release. In the data-folder in the release there are two example experimental images. 
+The source code and model weights can also be downloaded in the release at Github. In the data-folder in the release there are two example experimental images. 
 
 ### Install requirements
 For the installation of PyTorch it is best to check out the [PyTorch website](https://pytorch.org/) especially if you want a specific CUDA version.
