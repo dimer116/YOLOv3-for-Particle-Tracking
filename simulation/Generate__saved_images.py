@@ -1,13 +1,12 @@
 import os
 import SimulateTool
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
 import numpy as np
-import time
 import sys
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+# Generates images that are saved in training_data.
+# Run with integer parameters for starting index, and number of iterations.
 
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 args = sys.argv
 Starting_index = int(args[1])
 iterations = int(args[2])
@@ -36,7 +35,8 @@ if Update_csv:
     train_file.close()
 
 if Generate_images:
-    simulator = SimulateTool.SimulateTool(numImages=1, addStructNoise=False, numParticlesRange=[0, 10], addNoise=True, addAugment=False,
+    simulator = SimulateTool.SimulateTool(numImages=0, addStructNoise=False, numParticlesRange=[0, 10], addNoise=True,
+                                          addAugment=False,
                                           addIllumination=True, imageSize=[416, 416])
     for i in range(Starting_index, Starting_index + iterations):
         if Only_generate_test_images:
@@ -45,5 +45,7 @@ if Generate_images:
                 continue
         im = simulator.getNewImage()
         orig_bboxes = simulator.get_all_pos(im)
-                
-        print(str(i))
+
+        np.save('../training_data/images/img' + str(i), im)
+        np.save('../training_data/labels/boxes' + str(i), orig_bboxes)
+        print('iteration: ' + str(i))
