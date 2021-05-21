@@ -1,5 +1,6 @@
 import numpy as np
 
+# Tools for generation structural noise given an image size.
 
 def sinc(input,f,decay):
     return np.sin(f*input)/(1+input*decay)
