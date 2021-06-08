@@ -94,7 +94,7 @@ def test_on_experimental_data():
             model,
             conf_threshold=conf_threshold,
             pixel_threshold=10,
-            image_size=config.side,
+            image_size=config.PAD_SIDE,
             device=config.DEVICE,
             nms_threshold=nms_threshold,
             batch_size=batch_size,
@@ -119,7 +119,7 @@ def test_on_experimental_data():
             device=config.DEVICE,
             toggle_eval=False,
         )
-        y[0,:,0:2], nms_boxes[:, 1:3] = config.side*y[0,:,0:2], config.side*nms_boxes[:,1:3]
+        y[0,:,0:2], nms_boxes[:, 1:3] = config.PAD_SIDE * y[0, :, 0:2], config.PAD_SIDE * nms_boxes[:, 1:3]
         converted = convert_back(image = np.array(x[0].permute(1,2,0)), keypoints=y[0], keypoints1 = nms_boxes[:,1:])
         x, y, nms_boxes = converted['image'], np.array(converted['keypoints']), np.array(converted['keypoints1'])
         # Plot targets

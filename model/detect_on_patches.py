@@ -64,7 +64,7 @@ def run_on_patches(
 ):
     """
     Runs input image as 448x448 patches through model and returns resulting particle predictions
-    :param image: torch tensor of image to detect on of shape (side, side, 3) where side is divisible by 448.
+    :param image: torch tensor of image to detect on of shape (PAD_SIDE, PAD_SIDE, 3) where PAD_SIDE is divisible by 448.
     :param model: torch YOLOv3 model instance with loaded weights
     :param conf_threshold: confidence threshold over which to consider model predictions
     :param nms_threshold: pixel threshold under which two predictions are considered to be duplicates
@@ -139,9 +139,9 @@ def run_on_patches(
         curr_patch = patches[from_idx:to_idx].to(config.DEVICE)
         x_pos = x_indices[from_idx:to_idx].to(config.DEVICE)
         y_pos = y_indices[from_idx:to_idx].to(config.DEVICE)
-        with torch.cuda.amp.autocast():
-            with torch.no_grad():
-                out = model(curr_patch)
+        #with torch.cuda.amp.autocast():
+        with torch.no_grad():
+            out = model(curr_patch)
         out = [
             cells_to_preds(
                 out[i], out[i].shape[2], x_splits, y_splits, x_pos, y_pos, z_unit=z_unit
@@ -206,7 +206,7 @@ def detect():
         "-w",
         "--weights",
         type=str,
-        default="../weights.pth.tar",
+        default="weights.pth.tar",
         help="Path to weights or checkpoint file .pth.tar",
     )
     parser.add_argument(
